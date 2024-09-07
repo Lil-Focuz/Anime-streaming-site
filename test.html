@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Watch One Piece</title>
+    <link rel="stylesheet" href="test.css">
+</head>
+
+<body class="whole">
+    <header>
+        <h1 class="title">One piece Streaming Webpage</h1>
+    </header>
+    <div class="op_link">
+
+        <div class="input-group">
+            <input type="email" class="input" id="input-num" name="number" placeholder="Episode Number" autocomplete="off">
+            <input class="button--submit" id="link-button" value="Update Link" type="submit">
+        </div>
+
+        <a id="episode-link" class="hyperlink"href="https://gogoanime.org.es/streaming.php?slug=one-piece-episode-1" target = "_blank">Watch One Piece Episode 1</a>
+
+
+        <script>
+            const input = document.getElementById('input-num');
+            const link = document.getElementById('episode-link');
+            const button = document.getElementById('link-button');
+    
+            button.addEventListener('click', () => {
+                const selectedEpisode = parseInt(input.value);
+                const newLink = `https://gogoanime.org.es/streaming.php?slug=one-piece-episode-${selectedEpisode}`;
+                link.href = newLink;
+                link.textContent = `Watch One Piece Episode ${selectedEpisode}`;
+            });
+        </script>
+    </div>
+
+
+</html>
