@@ -1,0 +1,325 @@
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: blue;
+}
+
+.whole {
+    margin: 0;
+    height: 100vh;
+    background-color: #212121;
+}
+
+.op_link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #5e5dcd;
+  margin: 20px auto;
+  padding: 10px;
+  border-radius: 100px;
+  gap: 10px;
+  width: 825px;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333;
+    color: #fff;
+    height: 70px;
+    padding: 10px;
+    backdrop-filter: blur(10px);
+    background-image: url("./wallpaperflare.com_wallpaper.jpg");
+    border-radius: 90px;
+    margin-top: 5px;
+}
+
+/* UPDATE EPISODE */
+
+.input-group {
+    display: flex;
+    align-items: center;
+  }
+  
+  .input {
+    min-height: 50px;
+    max-width: 150px;
+    padding: 0 1rem;
+    color: #ffffff;
+    font-size: 15px;
+    border: 1px solid #5e4dcd;
+    border-radius: 6px 0 0 6px;
+    background-color: transparent;
+  }
+  
+  .button--submit {
+    min-height: 50px;
+    padding: .5em 1em;
+    border: none;
+    border-radius: 0 6px 6px 0;
+    background-color: #5e4dcd;
+    color: #fff;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color .3s ease-in-out;
+  }
+  
+  .button--submit:hover {
+    background-color: #5e5dcd;
+  }
+  
+  .input:focus, .input:focus-visible {
+    border-color: #3898EC;
+    outline: none;
+  }
+  
+.hyperlink {
+    display: inline-block;
+    padding: 12px 24px;
+    margin: 20px 0;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #5e5dcd;
+    border: 2px solid transparent;
+    border-radius: 25px;
+    transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.1);
+}
+
+.hyperlink:hover {
+    background-color: #5e5dcd;
+    border-color: #ffffff;
+    transform: scale(1.05);
+}
+
+.op_image {
+  max-width: 60%;
+  height:auto;
+  border-radius: 30px;
+}
+
+.op_img_div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.note {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #7d7d82;
+  font-size: 12px;
+}
+
+hr {
+  color: #5e4dcd51;
+}
+
+.tooltip-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  --background: #333333;
+  --color: #5bbfe4;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--color);
+  padding: 0.7em 1.8em;
+  border-radius: 8px;
+  text-transform: uppercase;
+  height: 60px;
+  width: 180px;
+  display: grid;
+  place-items: center;
+  border: 2px solid var(--color);
+}
+
+.text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  transform-origin: -100%;
+  transform: scale(1);
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.tooltip-container span:last-child {
+  position: absolute;
+  top: 0%;
+  left: 100%;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  opacity: 1;
+  background-color: var(--background);
+  z-index: -1;
+  border: 2px solid var(--background);
+  transform: scale(0);
+  transform-origin: 0;
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+  display: grid;
+  place-items: center;
+}
+
+.tooltip {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0.3em 0.6em;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+  background: var(--background);
+  z-index: -1;
+  border-radius: 8px;
+  scale: 0;
+  transform-origin: 0 0;
+  text-transform: capitalize;
+  font-weight: 400;
+  font-size: 16px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+}
+
+.tooltip::before {
+  position: absolute;
+  content: "";
+  height: 0.6em;
+  width: 0.6em;
+  bottom: -0.2em;
+  left: 50%;
+  transform: translate(-50%) rotate(45deg);
+  background: var(--background);
+}
+
+.tooltip-container:hover .tooltip {
+  top: -100%;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  scale: 1;
+  animation: shake 0.5s ease-in-out both;
+}
+
+.tooltip-container:hover {
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  color: white;
+  border-color: transparent;
+}
+
+.tooltip-container:hover span:last-child {
+  transform: scale(1);
+  left: 0;
+}
+
+.tooltip-container:hover .text {
+  opacity: 0;
+  top: 0%;
+  left: 100%;
+  transform: scale(0);
+}
+
+@keyframes shake {
+  0% {
+      rotate: 0;
+  }
+
+  25% {
+      rotate: 7deg;
+  }
+
+  50% {
+      rotate: -7deg;
+  }
+
+  75% {
+      rotate: 1deg;
+  }
+
+  100% {
+      rotate: 0;
+  }
+}
+
+.more_home {
+  margin: 0;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.a_vid {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  content: fill;
+  width: 100%;
+  height: 100%;
+}
+
+.a_vid_1 {
+  height: 80%;
+  width: 80%;
+}
+
+/* UPDATE EPISODE 1 */
+
+.input-group_1 {
+  display: flex;
+  align-items: center;
+
+}
+
+.input_1 {
+  min-height: 50px;
+  max-width: 150px;
+  padding: 0 1rem;
+  color: #ffffff;
+  font-size: 15px;
+  border: 1px solid #5e4dcd;
+  border-radius: 6px 0 0 6px;
+  background-color: transparent;
+  margin-top: 5px;
+}
+
+.button--submit_1 {
+  min-height: 50px;
+  padding: .5em 1em;
+  border: none;
+  border-radius: 0 6px 6px 0;
+  background-color: #5e4dcd;
+  color: #fff;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background-color .3s ease-in-out;
+}
+
+.button--submit_1:hover {
+  background-color: #5e5dcd;
+}
+
+.input_1:focus, .input:focus-visible {
+  border-color: #3898EC;
+  outline: none;
+}
