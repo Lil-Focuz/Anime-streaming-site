@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Watch Demon Slayer</title>
+    <link rel="stylesheet" href="demon_slayer.css">
+</head>
+
+<body class="whole">
+    <header>
+        <h1 class="title">Demon Slayer Streaming Webpage</h1>
+    </header>
+    <div class="op_img_div">
+        <img src="pictures/ds_image.jpeg" alt="Demon slayer" class="op_image">
+    </div>
+    <div class="op_link">
+
+        <div class="input-group">
+            <input type="email" class="input" id="input-num" name="number" placeholder="Episode Number" autocomplete="off">
+            <input class="button--submit" id="link-button" value="Update Link" type="submit">
+        </div>
+
+        <a id="episode-link" class="hyperlink" href="https://gogoanime.org.es/streaming.php?slug=kimetsu-no-yaiba-episode-1" target = "_blank">Watch Demon Slayer Episode 1 Externally</a>
+
+
+        <script>
+            const input = document.getElementById('input-num');
+            const link = document.getElementById('episode-link');
+            const button = document.getElementById('link-button');
+    
+            button.addEventListener('click', () => {
+                const selectedEpisode = parseInt(input.value);
+                const newLink = `https://gogoanime.org.es/streaming.php?slug=kimetsu-no-yaiba-episode-${selectedEpisode}`;
+                link.href = newLink;
+                link.download = `kimetsu-no-yaiba-episode-${selectedEpisode}.mp4`;
+                link.textContent = `Download Demon Slayer Episode ${selectedEpisode}`;
+            });
+        </script>
+    </div>
+
+    <div class="a_vid">
+        <iframe id="episode-link_1" class="a_vid_1" src="https://gogoanime.org.es/streaming.php?slug=kimetsu-no-yaiba-episode-1" allowfullscreen="true" frameborder="0" scrolling="no"></iframe>
+        
+        <div class="input-group_1">
+            <input type="email" class="input_1" id="input-num_1" name="number" placeholder="Episode Number" autocomplete="off">
+            <input class="button--submit" id="link-button_1" value="Update Episode" type="button">
+        </div>
+
+        <script>
+            const input_1 = document.getElementById('input-num_1');
+            const link_1 = document.getElementById('episode-link_1');
+            const button_1 = document.getElementById('link-button_1');
+    
+            button_1.addEventListener('click', () => {
+                const selectedEpisode_1 = parseInt(input_1.value, 10);
+                const newLink_1 = `https://gogoanime.org.es/streaming.php?slug=kimetsu-no-yaiba-episode-${selectedEpisode_1}`;
+                link_1.src = newLink_1;
+            });
+        </script>
+    </div>
+
+    <div class="more_home">
+        <a class="tooltip-container" href="../index.html">
+            <span class="tooltip">More Animes Here</span>
+            <span class="text">Home</span>
+            <span>Home</span>
+        </a>
+    </div>
+
+
+    <footer class="footer_notes">
+        <div>
+            <hr>
+            <p class="note">Made By Focuz</p>
+        </div>
+    </footer>
+
+</html>
